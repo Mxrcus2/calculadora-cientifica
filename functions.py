@@ -105,11 +105,31 @@ def fatorial():
     fatorial = math.factorial(int(numero))
     resultado = fatorial
     if len(str(fatorial)) <= 10:
-        print(f"O fatorial do seu numero: {numero}, é: {resultado}!")
+        print(f"O fatorial do seu numero: {numero}\né {resultado}!")
         print("______________________________________")
     else:
         resultado_limitado = math.trunc(fatorial * 10**10) / 10**10
         print(f"O fatorial do seu numero {numero}, é muito grande")
         print(f"Esse é o resultado compactado: {resultado_limitado}!")
         print("______________________________________")
+    return resultado
+
+
+def porcentagem():
+    try:
+        numero = int(input("Digite um numero: "))
+        porcentagem = int(input("Digite a porcentagem que deseja: "))
+        if numero == 0:
+            print("Digite apenas numeros!")
+            return None
+        if porcentagem >= 101:
+            print("Digite porcentagens de 1 a 100!")
+            return None
+    except ValueError:
+        print("Digite apenas numeros!")
+        return None
+    porcentagem_resultado = (porcentagem * numero) / 100
+    resultado = porcentagem_resultado
+    print("______________________________________")
+    print(f"A porcentagem do seu numero: {numero}\né {resultado:.2f}!")
     return resultado

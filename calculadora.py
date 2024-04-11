@@ -9,6 +9,7 @@ from functions import (
     raiz_quadrada,
     raiz_cubica,
     fatorial,
+    porcentagem,
 )
 
 Interface = {
@@ -23,7 +24,8 @@ Interface_Cientifica = {
     1: "Expoente",
     2: "Raiz quadrada e cubica",
     3: "Fatorial",
-    4: "Voltar a calculadora",
+    4: "Porcentagem",
+    5: "Voltar a calculadora",
 }
 
 calculadora = True
@@ -53,7 +55,7 @@ while True:
                 calculadora = False
     else:
         print("Calculadora cientifica do Markin🤓☝")
-        print("____________________________________")
+        print("______________________________________")
         print(Interface_Cientifica)
         print("______________________________________")
         escolha_cientifica = int(input("Digite um operador cientifico que deseja: "))
@@ -70,13 +72,19 @@ while True:
                 )
                 if opcao_raiz == 1:
                     raiz_quadrada()
+                    print("______________________________________")
                 if opcao_raiz == 2:
                     raiz_cubica()
+                    print("______________________________________")
                 if opcao_raiz == 3:
                     os.system("cls")
             case 3:
                 os.system("cls")
                 fatorial()
             case 4:
+                os.system("cls")
+                porcentagem()
+                print("______________________________________")
+            case 5:
                 os.system("cls")
                 calculadora = True
