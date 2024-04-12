@@ -10,6 +10,7 @@ from functions import (
     raiz_cubica,
     fatorial,
     porcentagem,
+    obterRadiano,
 )
 
 Interface = {
@@ -25,7 +26,8 @@ Interface_Cientifica = {
     2: "Raiz quadrada e cubica",
     3: "Fatorial",
     4: "Porcentagem",
-    5: "Voltar a calculadora",
+    5: "Obter Radiano de angulo",
+    6: "Voltar a calculadora",
 }
 
 calculadora = True
@@ -86,5 +88,9 @@ while True:
                 porcentagem()
                 print("______________________________________")
             case 5:
+                os.system("cls")
+                obterRadiano()
+                print("______________________________________")
+            case 6:
                 os.system("cls")
                 calculadora = True

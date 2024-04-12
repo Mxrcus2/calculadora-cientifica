@@ -133,3 +133,17 @@ def porcentagem():
     print("______________________________________")
     print(f"A porcentagem do seu numero: {numero}\né {resultado:.2f}!")
     return resultado
+
+
+def obterRadiano():
+    try:
+        angulo = int(input("Digite um angulo: "))
+        if angulo >= 361:
+            print("Digite um angulo existente!")
+            return None
+    except ValueError:
+        print("Digite apenas numeros!")
+    resultado = math.radians(angulo)
+    print("______________________________________")
+    print(f"O radiano do seu angulo: {angulo}\né {resultado}!")
+    return resultado
